@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 
 const URL_BASE = "https://www.sii.cl/valores_y_fechas/uf/uf2024.htm";
 
-async function getDataFromWebPage() {
+async function getUFValues() {
   // Inicia el navegador
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -58,12 +58,14 @@ async function getDataFromWebPage() {
     });
   });
 
-  console.log(data);
-
   // Cerrar el navegador
   await browser.close();
+
+  // Retornamos los datos extraídos
+  return data;
 }
 
-getDataFromWebPage()
-.then(() => console.log("Process finished"))
+// Ejecutar la función y mostrar los datos
+getUFValues()
+.then((data) => console.log(data))
 .catch((error) => console.error(error));
