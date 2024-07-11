@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 
 const URL_BASE = "https://www.sii.cl/valores_y_fechas/uf/uf2024.htm";
 
-async function getUFValues() {
+const getUFValues = async () => {
   // Inicia el navegador
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
