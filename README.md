@@ -1,0 +1,3 @@
+# Ejercicios Scraping
+
+Pequeños ejercicios para practicar scraping usando Node.js y otras herramientas...
