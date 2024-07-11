@@ -39,7 +39,8 @@ const getUFValues = async () => {
         const valueCell = cells[i + 1];
         if (valueCell && valueCell.innerText.trim() !== '') {
           const day = parseInt(dayCell.innerText.trim());
-          const value = parseFloat(valueCell.innerText.trim().replace(/\./g, '').replace(',', '.'));
+          const value = parseFloat(valueCell.innerText.trim().replace(/\./g, '')
+            .replace(',', '.'));
           tableData.push({ day, value });
         }
       }
